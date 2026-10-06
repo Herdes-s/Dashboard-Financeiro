@@ -1,0 +1,136 @@
+/* Reset global styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+
+.header {
+
+    background-color: #fff;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.user-info .user-logo {
+    border-radius: 50%;
+}
+
+.user-info .user-name {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Main content styles */
+
+.main {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Sidebar styles */
+
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Content styles */
+
+.content {
+    flex: 1;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.content-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.content-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.content-summary {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.summary-item {
+    text-align: center;
+}
+
+.content-summary .summary-item {
+    flex: 1;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.content-summary .summary-item:last-child {
+    margin-right: 0;
+}
+
+/* Figure styles */
+.content-figure {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.content-image {
+    max-width: 50%;
+    height: auto;
+}
