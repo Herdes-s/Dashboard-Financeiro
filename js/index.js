@@ -1,9 +1,5 @@
-const menu = document.getElementById("menu-container");
-menu === null || menu === void 0 ? void 0 : menu.addEventListener("click", () => {
-    const main = document.querySelector(".main");
-    if (main) {
-        main.classList.toggle("show-menu");
-    }
-});
-export {};
+import { toggleMenu } from "./toggleMenu.js";
+import { updateBalance } from "./dashboard.js";
+toggleMenu();
+updateBalance();
 //# sourceMappingURL=index.js.map
