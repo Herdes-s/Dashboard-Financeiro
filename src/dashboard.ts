@@ -1,3 +1,5 @@
+import { graphc } from "./graphic.js";
+
 const totalBalance = document.getElementById(
   "total-balance",
 ) as HTMLElement | null;
@@ -18,6 +20,13 @@ export function updateBalance() {
   if (totalBalance) {
     const total = totalEntriesValue - totalExitsValue;
 
-    totalBalance.textContent = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
+    totalBalance.textContent = total.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    graphc(10, 20);
+  });
 }

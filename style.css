@@ -149,15 +149,33 @@ html {
   margin-right: 0;
 }
 
-/* Figure styles */
-.content-figure {
-  text-align: center;
-  margin-top: 1rem;
+.chart-container {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-inline: auto;
 }
 
-.content-image {
-  max-width: 50%;
-  height: auto;
+.chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.chart-bar {
+  width: 40px;
+  background-color: #3b82f6;
+  border-radius: 4px 4px 0;
+  transition: height 0.5 ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: top;
 }
 
 @media (min-width: 768px) {
