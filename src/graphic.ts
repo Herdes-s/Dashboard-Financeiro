@@ -1,35 +1,32 @@
-
 interface ChartData {
-    label: string;
-    value: number;
+  label: string;
+  value: number;
 }
 
+export function graphc(entrada: number, saida: number) {
+  const mockData: ChartData[] = [
+    { label: "Entrada", value: entrada },
+    { label: "Saida", value: saida },
+  ];
 
-export function graphc( entrada: number, saida: number) {
-    
+  const chartElement = document.getElementById(
+    "my-chart",
+  ) as HTMLElement | null;
+  if (!chartElement) return;
 
-    const mockData: ChartData[] = [
-        {label: 'Entrada', value: entrada},
-        {label: 'Saida', value: saida},
-    ]
+  chartElement.innerHTML = "";
 
-    const chartElement = document.getElementById('my-chart') as HTMLElement | null;
-    if (!chartElement) return;
+  const maxValue = Math.max(...mockData.map((d) => d.value));
 
-    chartElement.innerHTML = "";
+  mockData.forEach((item) => {
+    const bar = document.createElement("div");
+    bar.classList.add("chart-bar");
 
-    const maxValue = Math.max(...mockData.map(d => d.value));
+    const barHeightPercent = (item.value / maxValue) * 100;
+    bar.style.height = `${barHeightPercent}%`;
 
-    mockData.forEach(item => {
-        const bar = document.createElement('div');
-        bar.classList.add('chart-bar');
+    bar.title = `${item.label}: R$ ${item.value}`;
 
-        const barHeightPercent = (item.value / maxValue) * 100;
-        bar.style.height = `${barHeightPercent}%`
-
-        bar.title = `${item.label}: R$ ${item.value}`;
-
-        chartElement.appendChild(bar);
-    })
-
+    chartElement.appendChild(bar);
+  });
 }
