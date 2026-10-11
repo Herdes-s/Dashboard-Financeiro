@@ -115,12 +115,18 @@ html {
 
 /* Content styles */
 
-.content {
+.aba-content {
   flex: 1;
   background-color: #fff;
   padding: 1rem;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  display: none;
+}
+
+.aba-content.active {
+  color: red;
+  display: block;
 }
 
 .content-title {
@@ -206,11 +212,11 @@ html {
     system-ui,
     -apple-system,
     sans-serif;
-  transition: background 0.2s ease;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .transaction:hover {
-  background-color: #f8fafc;
+  background-color: #c4e1ff;
 }
 
 .date {
@@ -256,7 +262,7 @@ html {
   align-items: center;
   justify-content: center;
   color: #64748b;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 
 .delete {
@@ -266,8 +272,8 @@ html {
 }
 
 .delete:hover {
-  background-color: #fee2e2;
-  color: #b91c1c;
+  color: #fee2e2;
+  background-color: #b91c1c;
 }
 
 .edit {
@@ -277,8 +283,30 @@ html {
 }
 
 .edit:hover {
-  background-color: #e0f2fe;
-  color: #0369a1;
+  color: #e0f2fe;
+  background: #0369a1;
+}
+
+.btn-mais {
+  font-weight: 600;
+
+  background-color: white;
+  color: #000000;
+  
+  padding: 0.5rem;
+
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-mais:hover {
+  
+  color: white;
+  background-color: #3b82f6;
 }
 
 @media (min-width: 768px) {
