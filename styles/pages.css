@@ -1,0 +1,310 @@
+/* Content styles */
+
+.aba-content {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: none;
+}
+
+.aba-content.active {
+  display: block;
+}
+
+.content-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.content-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-summary {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+.content-summary .summary-item {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.content-summary .summary-item:last-child {
+  margin-right: 0;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-inline: auto;
+}
+
+.chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.chart-bar {
+  width: 40px;
+  background-color: #3b82f6;
+  border-radius: 4px 4px 0;
+  transition: height 0.5 ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+/* Transactions Style */
+
+.recent-transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.transaction:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Bloco da Data */
+.transaction .date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4b5563;
+  min-width: 48px;
+}
+
+/* Se preferir formato DD/MM/AAAA em linha, remova o flex-direction column */
+.transaction .date span:not(:last-child)::after {
+  content: "/";
+}
+
+/* Título da Transação */
+.transaction-title {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Preço */
+.transaction .price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #059669; /* Verde para indicar valor/transação positiva */
+  white-space: nowrap;
+}
+
+/* Botões de Ação */
+.transaction-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.transaction .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #6b7280;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.transaction .btn.delete:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.transaction .btn.edit:hover {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+/* Responsividade para telas menores (Mobile) */
+@media (max-width: 480px) {
+  .transaction {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .transaction-title {
+    flex-basis: calc(100% - 70px);
+  }
+
+  .transaction .price {
+    order: 3;
+  }
+
+  .transaction-btns {
+    order: 4;
+    margin-left: auto;
+  }
+}
+
+.btn-mais {
+  font-weight: 600;
+
+  background-color: white;
+  color: #000000;
+
+  padding: 0.5rem;
+
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-mais:hover {
+  color: white;
+  background-color: #3b82f6;
+}
+
+/* Entrada Styles */
+
+.entrada {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px auto;
+}
+
+.entrada-title {
+  color: #333333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.entrada-value {
+  color: #2ecc71; 
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.btn-new {
+  width: 100%;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-bottom: 24px;
+}
+
+.btn-new:hover {
+  background-color: #27ae60;
+}
+
+.btn-new:active {
+  transform: scale(0.98);
+}
+
+.transactions {
+  border-top: 1px solid #eceff1;
+  padding-top: 20px;
+}
+
+.transactions-title {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 16px;
+}
+
+.inputs {
+  display: flex;
+  gap: 12px; 
+}
+
+.inputs input[type="text"],
+.inputs select {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #334155;
+  background-color: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inputs input[type="text"]:focus,
+.inputs select:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.15);
+  background-color: #ffffff;
+}
+
+.inputs select {
+  flex: 0 0 100px; 
+  cursor: pointer;
+}
+
+
+@media (min-width: 768px) {
+  .price {
+    min-width: 100px;
+  }
+}

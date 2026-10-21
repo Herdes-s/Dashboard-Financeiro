@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Dashboard Financeiro</title>
   </head>
   <body>
@@ -28,12 +28,12 @@
         <nav class="sidebar-nav">
           <ul>
             <li>
-              <a href="#" class="nav-abas active" data-target="dashboard"
-                >Dashboard</a
-              >
+              <a href="#" class="nav-abas" data-target="dashboard">Dashboard</a>
             </li>
             <li>
-              <a href="#" class="nav-abas" data-target="entrada">Entradas</a>
+              <a href="#" class="nav-abas active" data-target="entrada"
+                >Entradas</a
+              >
             </li>
             <li>
               <a href="#" class="nav-abas" data-target="entrada">Saídas</a>
@@ -49,7 +49,7 @@
           </ul>
         </nav>
       </aside>
-      <section id="dashboard" class="content aba-content active">
+      <section id="dashboard" class="content aba-content">
         <h2 class="content-title">Saldo disponivel</h2>
         <p class="content-value" id="total-balance">0</p>
 
@@ -71,7 +71,11 @@
         <h2 class="content-title">Ultimas transações</h2>
         <div class="recent-transactions">
           <div class="transaction">
-            <span class="date">10/10/2026</span>
+            <div class="date">
+              <span>10</span>
+              <span>10</span>
+              <span>2026</span>
+            </div>
             <p class="transaction-title">Aluguel</p>
             <span class="price">200R$</span>
             <div class="transaction-btns">
@@ -114,7 +118,11 @@
             </div>
           </div>
           <div class="transaction">
-            <span class="date">10/10/2026</span>
+            <div class="date">
+              <span>10</span>
+              <span>10</span>
+              <span>2026</span>
+            </div>
             <p class="transaction-title">Aluguel</p>
             <span class="price">200R$</span>
             <div class="transaction-btns">
@@ -157,7 +165,11 @@
             </div>
           </div>
           <div class="transaction">
-            <span class="date">10/10/2026</span>
+            <div class="date">
+              <span>10</span>
+              <span>10</span>
+              <span>2026</span>
+            </div>
             <p class="transaction-title">Aluguel</p>
             <span class="price">200R$</span>
             <div class="transaction-btns">
@@ -202,8 +214,19 @@
           <button class="btn-mais">ver todas...</button>
         </div>
       </section>
-      <section id="entrada" class="content aba-content">
-        <h1>hello</h1>
+      <section id="entrada" class="content entrada aba-content active">
+        <h2 class="entrada-title">Total Entradas</h2>
+        <p class="entrada-value">3</p>
+        <button class="btn-new">Nova Entrada</button>
+        <div class="transactions">
+          <h3 class="entrada-title transactions-title">Lista de Transações</h3>
+          <div class="inputs">
+            <input type="text" />
+            <select name="sec" id="">
+              <option value="" disabled selected>sec</option>
+            </select>
+          </div>
+        </div>
       </section>
     </main>
     <script type="module" src="js/index.js"></script>
