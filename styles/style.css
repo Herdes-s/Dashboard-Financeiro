@@ -12,15 +12,34 @@
 
 body,
 html {
+  width: 100%;
+  height: 100%;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
 
+body {
+  overflow: hidden;
+}
+
 /* Header styles */
 
+.app {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
+  height: 70px;
+  width: 100%;
+  z-index: 10;
+
   background-color: #fff;
   padding: 1rem;
   max-width: 1200px;
@@ -40,6 +59,9 @@ html {
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  border: none;
+  background-color: #fff;
 }
 
 .show-menu .sidebar {
@@ -74,23 +96,20 @@ html {
   color: #333;
 }
 
-/* Main content styles */
+/* Main e Sidebar content styles */
 
-.main {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-
-  display: block;
-  padding: 1rem;
-  gap: 1rem;
+.layout {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Sidebar styles */
 
 .sidebar {
+  min-height: 0;
+
   position: absolute;
-  top: 0;
+  top: 70px;
 
   width: 200px;
   background-color: #fff;
@@ -125,18 +144,58 @@ html {
   border-radius: 0.25rem;
 }
 
+/* Main content styles */
+
+.main {
+  width: 100%;
+  background-color: #fff;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  padding: 1rem;
+}
+
 @media (min-width: 768px) {
+  .app {
+    height: 100vh;
+    height: 100dvh;
+
+    display: grid;
+    grid-template-rows: 70px minmax(0, 1fr);
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+
+    min-height: 0;
+    min-width: 0;
+
+    margin: 1rem 2.5rem;
+  }
+
   .menu {
     display: none;
   }
 
   .main {
-    display: flex;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
   }
 
   .sidebar {
     position: relative;
     transform: translateX(0);
     display: block;
+    top: 0;
+
+    overflow: hidden;
   }
 }

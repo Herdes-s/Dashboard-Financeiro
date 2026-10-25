@@ -2,10 +2,10 @@ export function toggleMenu(): void {
   const menu = document.getElementById("menu-container");
 
   menu?.addEventListener("click", (): void => {
-    const main = document.querySelector(".main");
+    const layout = document.querySelector(".layout");
 
-    if (main) {
-      main.classList.toggle("show-menu");
+    if (layout) {
+      layout.classList.toggle("show-menu");
     }
   });
 }
