@@ -25,6 +25,24 @@
         </div>
       </header>
       <div class="layout">
+        <dialog class="modal" id="modal">
+          <form class="form" method="dialog" id="form">
+            <h2>Nova Entrada</h2>
+
+            <label for="description"></label>
+            <input type="text" id="description" placeholder="Descrição">
+            <label for="value"></label>
+            <input type="number" id="value" placeholder="Valor">
+            <label for="category"></label>
+            <input type="text" id="category" placeholder="Categoria">
+            <label for="date"></label>
+            <input type="date" id="date" placeholder="Data">
+            <div class="acoes">
+              <button type="submit">Criar</button>
+              <button type="button" id="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+            </div>
+          </form>
+        </dialog>
         <aside class="sidebar ">
           <nav class="sidebar-nav">
             <ul>
@@ -223,7 +241,7 @@
           <section id="entrada" class="content entrada aba-content active">
             <h2 class="entrada-title">Total Entradas</h2>
             <p class="entrada-value">3</p>
-            <button class="btn-new">Nova Entrada</button>
+            <button class="btn-new" id="btn-new" onclick="abrirModal()">Nova Entrada</button>
             <div class="transactions">
               <h3 class="entrada-title transactions-title">
                 Lista de Transações
