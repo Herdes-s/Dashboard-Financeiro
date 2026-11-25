@@ -22,7 +22,7 @@ export function graphc(entrada: number, saida: number) {
     const bar = document.createElement("div");
     bar.classList.add("chart-bar");
 
-    const barHeightPercent = (item.value / maxValue) * 100;
+    const barHeightPercent = maxValue === 0 ? 0 : (item.value / maxValue) * 100;
     bar.style.height = `${barHeightPercent}%`;
 
     bar.title = `${item.label}: R$ ${item.value}`;

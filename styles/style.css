@@ -1,4 +1,5 @@
 @import "./pages.css";
+@import "./modal.css";
 
 /* Reset global styles */
 
@@ -99,6 +100,7 @@ body {
 /* Main e Sidebar content styles */
 
 .layout {
+  position: relative;
   display: flex;
   flex-direction: column;
 }

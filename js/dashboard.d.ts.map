@@ -1,1 +1,1 @@
-{"version":3,"file":"dashboard.d.ts","sourceRoot":"","sources":["../src/dashboard.ts"],"names":[],"mappings":"AAYA,wBAAgB,aAAa,SAmB5B"}
+{"version":3,"file":"dashboard.d.ts","sourceRoot":"","sources":["../src/dashboard.ts"],"names":[],"mappings":"AAUA,KAAK,gBAAgB,GAAG;IACtB,OAAO,EAAE,MAAM,CAAC;IAChB,KAAK,EAAE,MAAM,CAAC;CACf,CAAA;AAID,wBAAgB,aAAa,IAAI,gBAAgB,CAiBhD"}

@@ -1,7 +1,7 @@
-import { graphc } from "./graphic.js";
 const totalBalance = document.getElementById("total-balance");
 const totalEntries = document.getElementById("total-entries");
 const totalExits = document.getElementById("total-exits");
+// --- CALCULA O TOTAL ---
 export function updateBalance() {
     const totalEntriesValidation = (totalEntries === null || totalEntries === void 0 ? void 0 : totalEntries.textContent) || "0";
     const totalExitsValidation = (totalExits === null || totalExits === void 0 ? void 0 : totalExits.textContent) || "0";
@@ -14,8 +14,6 @@ export function updateBalance() {
             currency: "BRL",
         });
     }
-    document.addEventListener("DOMContentLoaded", () => {
-        graphc(10, 20);
-    });
+    return { entrada: totalEntriesValue, saida: totalExitsValue };
 }
 //# sourceMappingURL=dashboard.js.map

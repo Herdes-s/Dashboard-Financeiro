@@ -1,3 +1,5 @@
+// --- ATIVA E DESATIVA MENU ---
+
 export function toggleMenu(): void {
   const menu = document.getElementById("menu-container");
 
@@ -9,6 +11,8 @@ export function toggleMenu(): void {
     }
   });
 }
+
+// --- TROCA AS ABAS ATIVAS ---
 
 export function switchTab(): void {
   const abas = document.querySelectorAll(".nav-abas");

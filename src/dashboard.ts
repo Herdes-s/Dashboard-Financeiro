@@ -1,5 +1,3 @@
-import { graphc } from "./graphic.js";
-
 const totalBalance = document.getElementById(
   "total-balance",
 ) as HTMLElement | null;
@@ -10,7 +8,14 @@ const totalEntries = document.getElementById(
 
 const totalExits = document.getElementById("total-exits") as HTMLElement | null;
 
-export function updateBalance() {
+type ValoresDashboard = {
+  entrada: number;
+  saida: number;
+}
+
+// --- CALCULA O TOTAL ---
+
+export function updateBalance(): ValoresDashboard {
   const totalEntriesValidation = totalEntries?.textContent || "0";
   const totalExitsValidation = totalExits?.textContent || "0";
 
@@ -26,7 +31,5 @@ export function updateBalance() {
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    graphc(10, 20);
-  });
+  return { entrada: totalEntriesValue, saida: totalExitsValue };
 }
